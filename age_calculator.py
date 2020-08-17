@@ -1,6 +1,7 @@
 from datetime import datetime
 
-today=datetime(2019,9,4)
+today=datetime.now()
+print(today)
 
 
 def check_birthdate(year, month, day):
@@ -14,7 +15,7 @@ def calculate_age(year, month, day):
         birthdate=datetime(year, month, day)
         difference = today - birthdate
         age=int(difference.days / 365)
-        print("you are ",age, " years old" )
+        print("you are %d years old" % (age))
 
 def main():
         
