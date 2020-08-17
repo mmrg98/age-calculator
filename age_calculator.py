@@ -14,7 +14,7 @@ def check_birthdate(year, month, day):
 def calculate_age(year, month, day):
         birthdate=datetime(year, month, day)
         difference = today - birthdate
-        age=int(difference.days / 365 -1)
+        age=int(difference.days / 365)
         print("you are ",age, " years old" )
 
 def main():
@@ -24,7 +24,7 @@ def main():
         month1=eval(input("Enter month of birth: "))
         day1=eval(input("Enter day of birth: "))
         
-        if(check_birthdate(year1, month1, day1)== True ):
+        if check_birthdate(year1, month1, day1):
                 calculate_age(year1, month1, day1)
         else:
                 print("Invalid birthdate")
